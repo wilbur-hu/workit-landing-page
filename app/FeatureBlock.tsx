@@ -23,10 +23,10 @@ export default function FeatureBlock(props: FeatureBlockProps) {
       <div className="flex items-center">
       <CircleNumber number={props.number} className="hidden md:flex lg:hidden mr-8" />
         <div>
-          <h2 className="font-fraunces font-semibold text-[28px] text-center md:text-left text-dark-purple">
+          <h2 className="font-fraunces font-semibold text-[28px] text-center md:text-left lg:text-center text-dark-purple">
             {props.title}
           </h2>
-          <p className="text-center md:text-left text-davys-grey mt-4">
+          <p className="text-center md:text-left lg:text-center text-davys-grey mt-4">
             {props.description}
           </p>
         </div>

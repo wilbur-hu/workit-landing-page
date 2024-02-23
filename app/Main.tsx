@@ -29,13 +29,14 @@ export function Main() {
 
   return (
     <main
-      className="flex min-h-screen flex-col items-stretch
+      className="flex flex-col items-stretch
       relative 
     "
     >
       {/* Title Section */}
       <section className="bg-dark-purple flex flex-col items-center px-4 pt-8 pb-16 ">
-        <h1 className="font-fraunces text-[50px] font-semibold text-white text-center">
+        <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] 
+        font-semibold text-white text-center lg:max-w-[635px] md:max-w-[500px]">
           Data{" "}
           <span className="underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
             tailored
@@ -50,20 +51,20 @@ export function Main() {
       <HeroImage />
 
       {/* Feature Section */}
-      <section className="bg-ghost-white pt-6">
+      <section className="bg-ghost-white pt-6 flex flex-col lg:flex-row justify-center px-[82px]">
         {features.map((feature) => (
-          <FeatureBlock className=" mt-10 mx-4 md:mx-[98px]" key={feature.number} {...feature} />
+          <FeatureBlock className=" mt-10 mx-4 md:mx-[98px] lg:mx-[13px]" key={feature.number} {...feature} />
         ))}
       </section>
 
       {/*Curve End*/}
       <div
-        style={{ clipPath: "ellipse(55% 50% at center top)" }}
-        className="h-[72px] bg-ghost-white"
+        style={{ clipPath:  "ellipse(55% 50% at center top)" }}
+        className="h-[72px] lg:h-[344px] bg-ghost-white"
       ></div>
 
       {/* Apply Section */}
-      <ApplyBlock className="mt-16" />
+      <ApplyBlock className="mt-16 lg:mt-0" />
 
       {/* Logo */}
       <Image className="self-center mt-[74px]" src={logoDark} alt="logo" width={96} height={24}  />
