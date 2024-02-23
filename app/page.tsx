@@ -1,8 +1,13 @@
-import Image from "next/image";
+import { Main } from "./Main";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    </main>
+    <div className="w-[376px]">
+      <Header />
+      <Main />
+      <Footer className="mt-[57px] mb-16" />
+    </div>
   );
 }
