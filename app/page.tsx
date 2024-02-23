@@ -4,7 +4,7 @@ import { Footer } from "./Footer";
 
 export default function Home() {
   return (
-    <div className="w-[376px]">
+    <div className="w-[376px] md:w-[768px]">
       <Header />
       <Main />
       <Footer className="mt-[57px] mb-16" />

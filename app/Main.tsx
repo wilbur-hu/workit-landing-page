@@ -52,13 +52,13 @@ export function Main() {
       {/* Feature Section */}
       <section className="bg-ghost-white pt-6">
         {features.map((feature) => (
-          <FeatureBlock key={feature.number} {...feature} />
+          <FeatureBlock className=" mt-10 mx-4 md:mx-[98px]" key={feature.number} {...feature} />
         ))}
       </section>
 
       {/*Curve End*/}
       <div
-        style={{ clipPath: "ellipse(60% 50% at center top)" }}
+        style={{ clipPath: "ellipse(55% 50% at center top)" }}
         className="h-[72px] bg-ghost-white"
       ></div>
 
