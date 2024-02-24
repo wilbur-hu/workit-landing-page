@@ -4,7 +4,7 @@ import logoLight from "@/public/images/logo-light.svg";
 export function Header() {
   return (
     <div className="bg-dark-purple flex flex-col items-stretch">
-      <header className="flex justify-between my-8 mx-4 md:mx-10 lg:mx-[165px] lg:my-[56px]">
+      <header className="flex items-stretch justify-between my-8 mx-4 md:mx-10 lg:mx-[165px] lg:my-[56px]">
         <div className="relative w-24">
           <Image src={logoLight} alt="logo" fill className=" object-contain" />
         </div>

@@ -37,7 +37,7 @@ export function Main() {
     >
       <div className=" bg-dark-purple">
         {/* Title Section */}
-        <section className="titleSection overflow-visible flex flex-col items-center px-4 mt-8 mb-16 lg:mb-[50px] relative">
+        <section className="titleSection overflow-visible flex flex-col items-center px-4 mt-8 mb-16 lg:mt-2 lg:mb-[50px] relative">
           <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] leading-none 
           font-semibold text-white text-center lg:max-w-[635px] md:max-w-[500px]">
             Data{" "}
@@ -47,7 +47,7 @@ export function Main() {
             to your needs.
           </h1>
 
-          <GreenButton href="#" classname="mt-10">Learn More</GreenButton>
+          <GreenButton href="#" classname="mt-[36px]">Learn more</GreenButton>
 
           <Image src={pattern1} alt="bg-pat-1" className="absolute hidden md:block md:top-0 lg:-left-[140px] md:-left-[240px]" />
           <Image src={pattern2} alt="bg-pat-2" className="w-[175px] z-10 absolute hidden md:block md:bottom-[-90px] lg:-right-[45px] md:-right-[100px] " />
