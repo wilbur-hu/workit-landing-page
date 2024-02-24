@@ -35,22 +35,26 @@ export function Main() {
       className="flex flex-col items-stretch relative overflow-clip
     "
     >
-      {/* Title Section */}
-      <section className="bg-dark-purple flex flex-col items-center px-4 pt-8 pb-16 relative">
-        <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] 
-        font-semibold text-white text-center lg:max-w-[635px] md:max-w-[500px]">
-          Data{" "}
-          <span className="underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
-            tailored
-          </span>{" "}
-          to your needs.
-        </h1>
+      <div className=" bg-dark-purple">
+        {/* Title Section */}
+        <section className="titleSection overflow-visible flex flex-col items-center px-4 mt-8 mb-16 lg:mb-[50px] relative">
+          <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] leading-none 
+          font-semibold text-white text-center lg:max-w-[635px] md:max-w-[500px]">
+            Data{" "}
+            <span className="underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
+              tailored
+            </span>{" "}
+            to your needs.
+          </h1>
 
-        <GreenButton href="#" classname="mt-10">Learn More</GreenButton>
+          <GreenButton href="#" classname="mt-10">Learn More</GreenButton>
 
-        <Image src={pattern1} alt="bg-pat-1" className="absolute hidden md:block md:top-0 lg:-left-[140px] md:-left-[240px]" />
-        <Image src={pattern2} alt="bg-pat-2" className="absolute hidden md:block md:bottom-[-20px] lg:-right-[80px] md:-right-[100px]" />
-      </section>
+          <Image src={pattern1} alt="bg-pat-1" className="absolute hidden md:block md:top-0 lg:-left-[140px] md:-left-[240px]" />
+          <Image src={pattern2} alt="bg-pat-2" className="w-[175px] z-10 absolute hidden md:block md:bottom-[-90px] lg:-right-[45px] md:-right-[100px] " />
+        </section>
+      </div>
+
+
 
       {/* Hero Image */}
       <HeroImage />
