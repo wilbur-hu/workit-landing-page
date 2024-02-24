@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "lg": "1440px",
+      },
       colors: {
         "dark-purple": "#24053E",
         "eucaplyptus": "#44FFA1",

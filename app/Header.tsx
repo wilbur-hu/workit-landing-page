@@ -8,7 +8,7 @@ export function Header() {
         <div className="relative w-24">
           <Image src={logoLight} alt="logo" fill className=" object-contain" />
         </div>
-        <a href="#" className="font-bold text-white underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
+        <a href="#" className="font-bold text-white hover:text-eucaplyptus underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
           Apply for access
         </a>
       </header>

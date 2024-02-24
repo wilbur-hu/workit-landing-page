@@ -5,6 +5,9 @@ import ApplyBlock from "./ApplyBlock";
 import logoDark from "@/public/images/logo-dark.svg";
 import Image from "next/image";
 
+import pattern1 from "@/public/images/bg-pattern-1.svg";
+import pattern2 from "@/public/images/bg-pattern-2.svg";
+
 export function Main() {
   const features: FeatureBlockProps[] = [
     {
@@ -29,12 +32,11 @@ export function Main() {
 
   return (
     <main
-      className="flex flex-col items-stretch
-      relative 
+      className="flex flex-col items-stretch relative overflow-clip
     "
     >
       {/* Title Section */}
-      <section className="bg-dark-purple flex flex-col items-center px-4 pt-8 pb-16 ">
+      <section className="bg-dark-purple flex flex-col items-center px-4 pt-8 pb-16 relative">
         <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] 
         font-semibold text-white text-center lg:max-w-[635px] md:max-w-[500px]">
           Data{" "}
@@ -45,6 +47,9 @@ export function Main() {
         </h1>
 
         <GreenButton href="#" classname="mt-10">Learn More</GreenButton>
+
+        <Image src={pattern1} alt="bg-pat-1" className="absolute hidden md:block md:top-0 lg:-left-[140px] md:-left-[240px]" />
+        <Image src={pattern2} alt="bg-pat-2" className="absolute hidden md:block md:bottom-[-20px] lg:-right-[80px] md:-right-[100px]" />
       </section>
 
       {/* Hero Image */}
@@ -67,7 +72,7 @@ export function Main() {
       <ApplyBlock className="mt-16 lg:mt-0" />
 
       {/* Logo */}
-      <Image className="self-center mt-[74px]" src={logoDark} alt="logo" width={96} height={24}  />
+      <Image className="bottomLogo self-center mt-[74px] lg:mt-[120px]" src={logoDark} alt="logo" width={96} height={24}  />
     </main>
   );
 }
