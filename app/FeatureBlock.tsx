@@ -5,11 +5,18 @@ export type FeatureBlockProps = {
   className?: string;
 };
 
-function CircleNumber({number, className}: {number: number, className?: string}) {
+function CircleNumber({
+  number,
+  className,
+}: {
+  number: number;
+  className?: string;
+}) {
   return (
     <div
-      className={`border border-davys-grey rounded-full w-12 h-12 flex items-center 
-      justify-center font-fraunces font-semibold text-xl shrink-0 ${className}`}
+      className={`flex h-[48px] w-[48px] shrink-0 items-center  justify-center rounded-full border border-davys-grey
+        font-fraunces text-xl font-medium md:h-[48px] md:w-[48px] lg:h-[55px] lg:w-[55px] 
+        ${className}`}
     >
       {number}
     </div>
@@ -18,15 +25,34 @@ function CircleNumber({number, className}: {number: number, className?: string})
 
 export default function FeatureBlock(props: FeatureBlockProps) {
   return (
-    <div className={`flex flex-col items-center ${props.className}`}>
-      <CircleNumber number={props.number} className="md:hidden lg:flex mb-6" />
+    <div
+      className={`flex flex-col items-center lg:w-[354px] ${props.className}`}
+    >
+      <CircleNumber
+        number={props.number}
+        className="mb-[20px]
+        md:hidden  
+        lg:mb-[54px] lg:mt-[4px] lg:flex"
+      />
       <div className="flex items-center">
-      <CircleNumber number={props.number} className="hidden md:flex lg:hidden mr-8" />
+        <CircleNumber
+          number={props.number}
+          className="md:[mt-4px] mr-8 hidden md:flex lg:hidden"
+        />
         <div>
-          <h2 className="font-fraunces font-semibold text-[28px] text-center md:text-left lg:text-center text-dark-purple">
+          <h2
+            className="text-center font-fraunces text-[28px] font-medium  tracking-[.01em]
+          text-dark-purple 
+          md:text-left md:tracking-[.01em] 
+          lg:text-center lg:text-[32px] lg:font-semibold"
+          >
             {props.title}
           </h2>
-          <p className="text-center md:text-left lg:text-center text-davys-grey mt-4">
+          <p
+            className="mt-[12px] text-center leading-[28px]  text-davys-grey 
+          md:mt-[14px] md:text-left md:leading-[28px] 
+          lg:mt-[24px] lg:text-center lg:leading-[32px]"
+          >
             {props.description}
           </p>
         </div>

@@ -1,12 +1,8 @@
-import { HeroImage } from "./HeroImage";
-import { GreenButton } from "./GreenButton";
+import CFABlock from "./CFABlock";
 import FeatureBlock, { FeatureBlockProps } from "./FeatureBlock";
-import ApplyBlock from "./ApplyBlock";
+import HeroBlock from "./HeroBlock";
 import logoDark from "@/public/images/logo-dark.svg";
 import Image from "next/image";
-
-import pattern1 from "@/public/images/bg-pattern-1.svg";
-import pattern2 from "@/public/images/bg-pattern-2.svg";
 
 export function Main() {
   const features: FeatureBlockProps[] = [
@@ -32,50 +28,55 @@ export function Main() {
 
   return (
     <main
-      className="flex flex-col items-stretch relative overflow-clip
+      className="relative flex flex-col items-stretch overflow-clip
     "
     >
-      <div className=" bg-dark-purple">
-        {/* Title Section */}
-        <section className="titleSection overflow-visible flex flex-col items-center px-4 mt-8 mb-16 md:mt-[24px] lg:mt-2 lg:mb-[50px] relative">
-          <h1 className="font-fraunces text-[50px] md:text-[60px] lg:text-[80px] leading-none 
-          font-medium text-white text-center lg:max-w-[635px] md:max-w-[500px]">
-            Data{" "}
-            <span className="underline decoration-eucaplyptus decoration-[3px] underline-offset-8">
-              tailored
-            </span>{" "}
-            to your needs.
-          </h1>
-
-          <GreenButton href="#" classname="mt-[36px] md:mt-[40px]">Learn more</GreenButton>
-
-          <Image src={pattern1} alt="bg-pat-1" className="absolute hidden md:block md:-top-[50px] md:-left-[228px] lg:-left-[140px] " />
-          <Image src={pattern2} alt="bg-pat-2" className="w-[175px] z-10 absolute hidden md:block md:bottom-[-94px] lg:-right-[45px] md:-right-[95px] " />
-        </section>
-      </div>
-
-
-      {/* Hero Image */}
-      <HeroImage />
+      <HeroBlock />
 
       {/* Feature Section */}
-      <section className="bg-ghost-white pt-6 flex flex-col lg:flex-row justify-center px-[82px]">
-        {features.map((feature) => (
-          <FeatureBlock className=" mt-10 mx-4 md:mx-[98px] lg:mx-[13px]" key={feature.number} {...feature} />
-        ))}
+      <section
+        className="flex flex-col justify-center bg-ghost-white pt-[22px]
+        md:pt-[52px] 
+        lg:flex-row lg:pt-[42px]"
+      >
+        {features.map((feature, idx) => {
+          const mdTopMargin =
+            idx !== 0 ? "md:mt-[44px]" : "md:mt-0 lg:mt-[44px]";
+          return (
+            <FeatureBlock
+              className={`mx-[14px] mt-10
+              md:mx-[96px] ${mdTopMargin} 
+              lg:mx-[12px]`}
+              key={feature.number}
+              {...feature}
+            />
+          );
+        })}
       </section>
 
       {/*Curve End*/}
       <div
-        style={{ clipPath:  "ellipse(55% 50% at center top)" }}
-        className="h-[72px] lg:h-[344px] bg-ghost-white"
+        style={{ clipPath: "ellipse(55% 50% at center 24%)" }}
+        className="h-[72px] bg-ghost-white md:h-[140px] lg:h-[230px]"
       ></div>
 
-      {/* Apply Section */}
-      <ApplyBlock className="mt-16 lg:mt-0" />
+      {/* CFA Section */}
+      <CFABlock
+        className="mt-[100px] 
+      md:mt-[63px] 
+      lg:mt-[50px]"
+      />
 
       {/* Logo */}
-      <Image className="bottomLogo self-center mt-[74px] lg:mt-[120px]" src={logoDark} alt="logo" width={96} height={24}  />
+      <Image
+        className="bottomLogo mt-[74px] self-center 
+        md:mt-[80px]
+        lg:mt-[120px]"
+        src={logoDark}
+        alt="logo"
+        width={96}
+        height={24}
+      />
     </main>
   );
 }

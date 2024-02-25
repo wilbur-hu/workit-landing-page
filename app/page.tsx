@@ -1,6 +1,6 @@
-import { Main } from "./Main";
-import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { Header } from "./Header";
+import { Main } from "./Main";
 
 export default function Home() {
   return (

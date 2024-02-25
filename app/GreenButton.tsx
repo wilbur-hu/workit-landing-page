@@ -4,11 +4,11 @@ export type GreenButtonProps = {
   classname?: string;
 };
 
-export function GreenButton(props: GreenButtonProps) {
+export default function GreenButton(props: GreenButtonProps) {
   return (
     <a
       href={props.href}
-      className={`self-center bg-eucaplyptus text-dark-purple font-semibold lg:py-[15px] lg:px-[30px] md:py-[13.5px] md:px-[22px] ${props.classname} hover:bg-dark-purple hover:text-eucaplyptus border-eucaplyptus border-[2px]`}
+      className={`self-center border-[2px] border-eucaplyptus bg-eucaplyptus font-semibold text-dark-purple hover:bg-dark-purple hover:text-eucaplyptus ${props.classname} `}
     >
       {props.children}
     </a>
